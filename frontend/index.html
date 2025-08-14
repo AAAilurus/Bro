@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BRO • Student Life Guide</title>
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <nav class="sidebar">
+    <div class="brand"><span class="dot"></span> BRO • Guide</div>
+    <a href="#home"      data-sec="home">Home</a>
+    <a href="#ssn"       data-sec="ssn">SSN</a>
+    <a href="#banking"   data-sec="banking">Banking (Debit & Credit)</a>
+    <a href="#insurance" data-sec="insurance">Insurance (Health & Car)</a>
+    <a href="#goc"       data-sec="goc">Govt Offices & Cards</a>
+    <a href="#health"    data-sec="health">Health Care</a>
+    <a href="#furn"      data-sec="furn">Furniture & Buying Sites</a>
+    <a href="#comm"      data-sec="comm">FB Communities</a>
+    <a href="#lic"       data-sec="lic">License / Permits</a>
+    <a href="#temples"   data-sec="temples">Temples / Faith</a>
+    <a href="#food"      data-sec="food">Food & Restaurants</a>
+    <a href="#fun"       data-sec="fun">Fun Activities</a>
+    <a href="#drive"     data-sec="drive">Scenic Drives</a>
+    <a href="#lakes"     data-sec="lakes">Lakes</a>
+    <button id="openGate" class="ghost" style="margin-top:auto">Login / Sign up</button>
+    <button id="logoutBtn" class="ghost">Logout</button>
+  </nav>
+
+  <main id="contentWrap">
+    <header class="topbar">
+      <div class="title"><span class="dot"></span> <span id="pageTitle">Home</span></div>
+      <div class="profile">
+        <input id="p_uni"  placeholder="University" />
+        <input id="p_city" placeholder="City, State" />
+        <select id="p_diet">
+          <option value="any">Any</option>
+          <option value="veg">Vegetarian</option>
+          <option value="vegan">Vegan</option>
+          <option value="halal">Halal</option>
+        </select>
+        <button id="saveProfile" class="ghost">Save</button>
+      </div>
+    </header>
+
+    <section id="page"><!-- filled by app.js --></section>
+  </main>
+
+  <!-- Login/Signup modal (hidden by default) -->
+  <div id="gate" class="gate hide">
+    <div class="modal">
+      <h2>Welcome! Create an account or log in</h2>
+      <div class="grid">
+        <div class="panel">
+          <h3>Sign up</h3>
+          <input id="su_name" placeholder="Full name" />
+          <input id="su_email" placeholder="Email (local only)" />
+          <input id="su_pass" type="password" placeholder="Password" />
+          <input id="su_uni"  placeholder="University (optional)" />
+          <input id="su_city" placeholder="City, State (optional)" />
+          <select id="su_diet">
+            <option value="any">Diet: Any</option>
+            <option value="veg">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="halal">Halal</option>
+          </select>
+          <button id="btn_signup">Create account</button>
+        </div>
+        <div class="panel">
+          <h3>Log in</h3>
+          <input id="li_email" placeholder="Email" />
+          <input id="li_pass" type="password" placeholder="Password" />
+          <button id="btn_login">Log in</button>
+          <button id="btn_demo" class="ghost">Demo user</button>
+        </div>
+      </div>
+      <button id="closeGate" class="ghost small">Close</button>
+      <p class="mini">Local-first: everything stays in this browser.</p>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
